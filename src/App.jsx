@@ -1,17 +1,16 @@
-import { useState } from "react";
+import Accessible from "./accessible/accessible";
 import "./App.css";
+import Book from "./book/Book";
 
 function App() {
-    const [isOpen, setIsOpen] = useState(false);
-
     return (
-        <div
-            className={`container ${isOpen ? "opened" : "closed"}`}
-            onClick={() => setIsOpen(!isOpen)}
-        >
-            <div className="bar top"></div>
-            <div className="bar middle"></div>
-            <div className="bar bottom"></div>
+        <div>
+            <div>
+                <Book />
+            </div>
+            <div style={{ position: "relative" }}>
+                <Accessible />
+            </div>
         </div>
     );
 }
